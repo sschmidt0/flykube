@@ -22,7 +22,17 @@
 /* container of two bottons
    ========================================================================== */
 .upper-content {
+  display: flex;
+  justify-content: center;
 
+  div {
+    margin: 20px 0;
+    padding: 0 30px;
+  }
+
+  div:first-child {
+    border-right: 1px solid lightgrey;
+  }
 }
 
 /* card with form and logo
@@ -50,4 +60,22 @@
       order: 1;
     }
   }
+}
+
+/* button
+   ========================================================================== */
+button {
+  width: 90px;
+  padding: 12px 20px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.12), 0px 2px 5px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.active {
+  background: linear-gradient(90deg, rgba(35,128,206,1) 0%, rgba(75,170,249,1) 100%);
+  color: #fff;
 }
