@@ -1,0 +1,53 @@
+/* app container
+   ========================================================================== */
+.App {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* logo and animation
+   ========================================================================== */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* container of two bottons
+   ========================================================================== */
+.upper-content {
+
+}
+
+/* card with form and logo
+   ========================================================================== */
+.lower-content {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+
+    div {
+      width: 50%;
+    }
+  }
+
+  .logo {
+    // change order of flex children
+    order: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      order: 1;
+    }
+  }
+}
