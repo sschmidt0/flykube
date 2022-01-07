@@ -1,3 +1,11 @@
+$white: #fff;
+$black: #333;
+$dark-gradient: rgba(35,128,206,1);
+$light-gradient: rgba(75,170,249,1);
+$green: #006400;
+$light-grey: lightgrey;
+
+
 /* app container
    ========================================================================== */
 .App {
@@ -19,6 +27,15 @@
   }
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* container of two bottons
    ========================================================================== */
 .upper-content {
@@ -31,7 +48,7 @@
   }
 
   div:first-child {
-    border-right: 1px solid lightgrey;
+    border-right: 1px solid $light-grey;
   }
 }
 
@@ -40,6 +57,14 @@
 .lower-content {
   display: flex;
   flex-direction: column;
+  min-width: 320px;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid $light-grey;
+  border-radius: 20px;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.12), 0px 2px 5px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.08);
+
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -75,8 +100,8 @@ form {
 button {
   width: 90px;
   padding: 12px 20px;
-  background-color: #fff;
-  color: #333;
+  background-color: $white;
+  color: $black;
   border: none;
   border-radius: 10px;
   box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.12), 0px 2px 5px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.08);
@@ -88,8 +113,8 @@ button {
 }
 
 .active {
-  background: linear-gradient(90deg, rgba(35,128,206,1) 0%, rgba(75,170,249,1) 100%);
-  color: #fff;
+  background: linear-gradient(90deg, $dark-gradient 0%, $light-gradient 100%);
+  color: $white;
 }
 
 /* input
@@ -99,7 +124,7 @@ input {
   max-width: 200px;
   margin: 10px 10px 40px;
   padding: 10px;
-  border: 1px solid rgba(60, 66, 87, 0.12);
+  border: 1px solid $light-grey;
   border-radius: 5px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.04);
   outline: none;
@@ -110,7 +135,7 @@ input {
 }
 
 .coloured {
-  background-color: #006400;
-  border: 1px solid #006400;
+  background-color: $green;
+  border: 1px solid $green;
   color: #fff;
 }
